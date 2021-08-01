@@ -3,3 +3,15 @@
 JavaScript 學習記錄
 
 講師：張志寧
+
+---
+
+[01. 點擊數字加一](https://hitanyah.github.io/javascript-lesson-note/public/01.getElementById/index.html)
+
+[02. 簡單計數器](https://hitanyah.github.io/javascript-lesson-note/public/02.簡單計數器/index.html)
+
+[03. 美金台幣轉換器](https://hitanyah.github.io/javascript-lesson-note/public/03.美金台幣轉換器/index.html)
+
+[04. BMI 計算機](https://hitanyah.github.io/javascript-lesson-note/public/04.BMI計算機/index.html)
+
+[05. 九九乘法表](https://hitanyah.github.io/javascript-lesson-note/public/05.九九乘法表/index.html)
