@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- my css -->
+    <!-- <link href="index.css" rel="stylesheet"> -->
+
+    <title>會員註冊表單</title>
+</head>
+<body>
+    <div class="container p-5">
+      <div class="card p-5">
+        <div class="card-body">
+          <h5 class="card-title mb-5">會員註冊表單</h5>
+          <form>
+            <div class="form-group w-50">
+              <label for="inputId">帳號</label>
+              <input type="text" class="form-control" id="inputId" placeholder="請輸入6碼以上" required>
+              <p id="warningId" class="small p-2 m-0" style="color:orangered"></p>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputPw">密碼</label>
+                <input type="password" class="form-control" id="inputPw" placeholder="8碼以上英數字組合 含至少一個大寫字母">
+                <p id="warningPw" class="small p-2 m-0" style="color:orangered"></p>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPw2">密碼驗證</label>
+                <input type="password" class="form-control" id="inputPw2" placeholder="請再次輸入相同密碼">
+                <p id="warningPw2" class="small p-2 m-0" style="color:orangered"></p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputName">會員名稱</label>
+              <input type="text" class="form-control" id="inputName" placeholder="請輸入會員顯示名稱">
+              <p id="warningName" class="small p-2 m-0" style="color:orangered"></p>
+            </div>
+            <div class="form-group">
+              <label for="inputMail">e-mail</label>
+              <input type="text" class="form-control" id="inputMail" placeholder="請輸入電子信箱">
+              <p id="warningMail" class="small p-2 m-0" style="color:orangered"></p>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="inputCity">居住縣市</label>
+                <select id="inputCity" class="form-control">
+                  <!-- <option selected>請選擇</option>
+                  <option>...</option> -->
+                </select>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputDist">鄉鎮市區</label>
+                <select id="inputDist" class="form-control">
+                  <option selected>請選擇</option>
+                  <option>...</option>
+                </select>
+              </div>
+              <div class="form-group col-md-2">
+                <label for="inputZip">郵遞區號</label>
+                <input type="text" class="form-control" id="inputZip" value="">
+              </div>
+            </div>
+            <div class="form-group mb-5">
+              <label for="inputAddress">地址</label>
+              <input type="text" class="form-control" id="inputAddress" placeholder="請輸入詳細地址">
+              <p id="warningAddress" class="small p-2 m-0" style="color:orangered"></p>
+            </div>
+            
+            
+            <div class="form-group my-3">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                  我想接收最新消息e-mail
+                </label>
+              </div>
+            </div>
+            
+            <button id="submitBtn" type="submit" class="btn btn-primary mt-2">提交註冊</button>
+          </form>
+
+
+        </div>
+      </div>
+    </div>
+
+    <script src="townships.js"></script>
+    <script src="index.js"></script>
+
+</body>
+</html>
