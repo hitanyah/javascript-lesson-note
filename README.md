@@ -15,3 +15,7 @@ JavaScript 學習記錄
 [04. BMI 計算機](https://hitanyah.github.io/javascript-lesson-note/public/04.BMI計算機/index.html)
 
 [05. 九九乘法表](https://hitanyah.github.io/javascript-lesson-note/public/05.九九乘法表/index.html)
+
+[06. 註冊表單驗證](https://hitanyah.github.io/javascript-lesson-note/public/06.註冊表單驗證/index.html)
+
+[07. TODO List](https://hitanyah.github.io/javascript-lesson-note/public/07.TodoList/index.html)
