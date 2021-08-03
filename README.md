@@ -19,3 +19,5 @@ JavaScript 學習記錄
 [06. 註冊表單驗證](https://hitanyah.github.io/javascript-lesson-note/public/06.註冊表單驗證/index.html)
 
 [07. TODO List](https://hitanyah.github.io/javascript-lesson-note/public/07.TodoList/index.html)
+
+[08. 擲骰子遊戲](https://hitanyah.github.io/javascript-lesson-note/public/08.擲骰子遊戲/index.html)

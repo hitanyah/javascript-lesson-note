@@ -1,0 +1,28 @@
+/* * {
+  border: 1px solid tan;
+} */
+.row i {
+  font-size: 100px;
+  color: antiquewhite;
+}
+.left {
+  height: 300px;
+  background-color: palevioletred;
+}
+.right {
+  height: 300px;
+  background-color: royalblue;
+}
+h3 {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.result {
+  color: gray;
+}
+.playerWin {
+  color: palevioletred;
+}
+.npcWin {
+  color: royalblue;
+}
