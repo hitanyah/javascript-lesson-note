@@ -21,3 +21,5 @@ JavaScript 學習記錄
 [07. TODO List](https://hitanyah.github.io/javascript-lesson-note/public/07.TodoList/index.html)
 
 [08. 擲骰子遊戲](https://hitanyah.github.io/javascript-lesson-note/public/08.擲骰子遊戲/index.html)
+
+[09. 串資料練習 01](https://hitanyah.github.io/javascript-lesson-note/public/09.串資料練習01/index.html)

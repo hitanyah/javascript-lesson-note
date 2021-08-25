@@ -1,28 +1,42 @@
 /* * {
   border: 1px solid tan;
 } */
-.row i {
-  font-size: 100px;
-  color: antiquewhite;
+
+h1,
+h3 {
+  font-family: 'VT323', monospace;
 }
-.left {
-  height: 300px;
-  background-color: palevioletred;
+h4 {
+  font-family: 'Sedgwick Ave', cursive;
 }
-.right {
-  height: 300px;
-  background-color: royalblue;
+h6,
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  margin: 8px 0;
+}
+h1 {
+  font-size: 48px;
 }
 h3 {
-  color: rgba(255, 255, 255, 0.6);
+  border-bottom: 3px solid black;
+}
+h6 {
+  font-weight: bold;
+  margin-right: 12px;
 }
 
-.result {
-  color: gray;
+ol,
+li {
+  list-style: square;
 }
-.playerWin {
-  color: palevioletred;
+
+.card {
+  border: 5px solid black;
+  border-radius: 0.5em;
+  min-height: 360px;
 }
-.npcWin {
-  color: royalblue;
+.card:hover {
+  box-shadow: 5px 8px 0 0 black;
 }

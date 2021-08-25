@@ -8,36 +8,42 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Sedgwick+Ave&family=VT323&display=swap" rel="stylesheet">
     <!-- my css -->
     <link href="style.css" rel="stylesheet">
 
-    <title>擲骰子遊戲</title>
+    <title>串資料練習：英雄小鎮</title>
 </head>
 <body>
-    <div class="container p-5">
-      <h2 class="text-center my-5">擲骰子比大小</h2>
-      <div class="row">
-        <div class="left d-flex flex-wrap col-md-6">
-          <h3 class="text-center py-3 col-12">PLAYER</h3>
-          <div id="playerDice" class="text-center mx-auto">
-            <i class="fas fa-dice-one"></i>
+  <header class="my-5">
+    <h1 id="squadName" class="text-center my-4">Town Name</h1>
+    <h4 id="homeTown" class="text-center"> homeTown </h4>
+  </header>
+  <div class="container">
+      <div id="card" class="row">
+        <!-- <div class="col-12 col-sm-6 col-md-4">
+          <div class="card m-2 p-4">
+              <h3 id="heroName" class="text-center mb-4 mt-2">Name</h3>
+              <div id="age" class="d-flex">
+                <h6>Age:</h6>
+                <p>123</p>
+              </div>
+              <div id="secretIdentity" class="d-flex">
+              <h6>Secret Identity:</h6> 
+              <p>Dan Jukes</p>
+              </div>
+              <div id="powers">
+                <h6>Powers:</h6>
+                <ul>
+                  <li>12345</li>
+                </ul>
+              </div>
           </div>
-        </div>
-        <div class="right d-flex flex-wrap col-md-6">
-          <h3 class="text-center py-3 col-12">COMPUTER</h3>
-          <div id="npcDice" class="text-center mx-auto">
-            <i class="fas fa-dice-one"></i>
-          </div>
-        </div>
-      </div>
-      <div id="resultText" class="text-center mx-auto my-5">
-        <h4 class="result">點數越大者勝</h4>
-        <!-- <h4 class="playerWin">玩家勝 <i class="far fa-smile-wink"></i></h4>
-        <h4 class="npcWin">電腦勝 <i class="fas fa-sad-tear"></i></h4> -->
-      </div>
-      <div class="text-center mx-auto">
-        <button id="playBtn" class="btn btn-lg btn-outline-secondary">洗八啦！</button>
-      </div>
+        </div> -->
+      </div> 
     </div>
 
     <script src="index.js"></script>

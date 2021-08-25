@@ -1,86 +1,72 @@
-// button
-const playBtn = document.getElementById('playBtn')
+// 參考 https://developer.mozilla.org/zh-TW/docs/Learn/JavaScript/Objects/JSON
+// 取得元素
+const squadName = document.querySelector('#squadName')
+const homeTown = document.querySelector('#homeTown')
+const card = document.querySelector('#card')
+// const heroName = document.querySelector('#heroName')
+// const age = document.querySelector('#squadName')
+// const secretIdentity = document.querySelector('#secretIdentity')
+// const powers = document.querySelector('#powers')
 
-// dice
-const playerDice = document.getElementById('playerDice')
-const npcDice = document.getElementById('npcDice')
+// data URL
+const requestURL =
+  'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json'
 
-// result text
-const resultText = document.getElementById('resultText')
+// 建立GET方法請求，從 XMLHttpRequest 建構子建立新的請求物件實例
+const request = new XMLHttpRequest()
+request.open('GET', requestURL, true)
 
-function playgame() {
-  // 產生 1-6 隨機數
-  const playerNum = Math.floor(Math.random() * 6) + 1
-  const npcNum = Math.floor(Math.random() * 6) + 1
+// 設定回傳 JSON 物件
+request.responseType = 'json'
+request.send()
 
-  // 連到 font-awesome 對應名稱
-  let playerPoint = ''
-
-  switch (playerNum) {
-    case 1:
-      playerPoint = 'one'
-      break
-    case 2:
-      playerPoint = 'two'
-      break
-    case 3:
-      playerPoint = 'three'
-      break
-    case 4:
-      playerPoint = 'four'
-      break
-    case 5:
-      playerPoint = 'five'
-      break
-    case 6:
-      playerPoint = 'six'
-      break
-    default:
-      playerPoint = 'six'
-      break
-  }
-
-  let npcPoint = ''
-
-  switch (npcNum) {
-    case 1:
-      npcPoint = 'one'
-      break
-    case 2:
-      npcPoint = 'two'
-      break
-    case 3:
-      npcPoint = 'three'
-      break
-    case 4:
-      npcPoint = 'four'
-      break
-    case 5:
-      npcPoint = 'five'
-      break
-    case 6:
-      npcPoint = 'six'
-      break
-    default:
-      npcPoint = 'six'
-      break
-  }
-
-  // 呈現圖示
-  playerDice.innerHTML = `<i class="fas fa-dice-${playerPoint}"></i>`
-  npcDice.innerHTML = `<i class="fas fa-dice-${npcPoint}"></i>`
-
-  // 比較勝負
-  // 呈現結果
-  if (playerNum > npcNum) {
-    resultText.innerHTML =
-      '<h4 class="playerWin">玩家勝 <i class="far fa-smile-wink"></i></h4>'
-  } else if (playerNum < npcNum) {
-    resultText.innerHTML =
-      '<h4 class="npcWin">電腦勝 <i class="fas fa-sad-tear"></i></h4>'
-  } else {
-    resultText.innerHTML = '<h4 class="result">平手</h4>'
-  }
+// response
+request.onload = function () {
+  const data = request.response
+  console.log(data)
+  showHeader(data)
+  showCards(data)
 }
 
-playBtn.addEventListener('click', playgame)
+// 呈現標題
+function showHeader(data) {
+  squadName.innerText = data.squadName
+  homeTown.innerText = data.homeTown
+}
+
+// 呈現卡片
+function showCards(data) {
+  const heros = data.members
+  console.log(heros)
+  console.log(heros[0].name)
+  console.log(heros.length)
+
+  for (let i = 0; i < heros.length; i++) {
+    // let superPowers = heros[i].powers
+    // const powerList = document.createElement('ul')
+    // for (let j = 0; j < superPowers.length; j++) {
+    //   const listItem = document.createElement('li')
+    //   listItem.textContent = superPowers[j]
+    //   powerList.appendChild(listItem)
+    // }
+    // console.log(powerList)
+
+    card.innerHTML += `<div class="col-12 col-sm-6 col-md-4">
+      <div class="card m-2 p-4">
+        <h3 id="heroName" class="text-center mb-4 mt-2">${heros[i].name}</h3>
+        <div id="age" class="d-flex">
+          <h6>Age:</h6>
+          <p>${heros[i].age}</p>
+        </div>
+        <div id="secretIdentity" class="d-flex">
+        <h6>Secret Identity:</h6>
+        <p>${heros[i].secretIdentity}</p>
+        </div> 
+        <div id="powers">
+          <h6>Powers:</h6>
+            <p>${heros[i].powers}</p>
+        </div>
+      </div>
+  </div>`
+  }
+}
