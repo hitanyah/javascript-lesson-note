@@ -4,6 +4,11 @@ const inputPw = document.getElementById('inputPw')
 const inputPw2 = document.getElementById('inputPw2')
 const inputName = document.getElementById('inputName')
 const inputMail = document.getElementById('inputMail')
+
+const inputYear = document.getElementById('inputYear')
+const inputMonth = document.getElementById('inputMonth')
+const inputDay = document.getElementById('inputDay')
+
 const inputCity = document.getElementById('inputCity')
 const inputDist = document.getElementById('inputDist')
 const inputZip = document.getElementById('inputZip')
@@ -22,11 +27,63 @@ const warningAddress = document.getElementById('warningAddress')
 
 // alert
 
-// 輸入格式規則
+// TODO 輸入格式規則
 const ruleId = new RegExp('^([a-z0-9])$')
 const rulePw = new RegExp('^(?=.*[a-z])(?=.*[A-Z])(?=.*d)$')
 
-// 地址下拉選單
+// ----- 生日下拉選單
+// 預設選項值
+let selectYear = 0
+let selectMonth = 0
+let selectDay = 0
+// let yearIndex = 0
+// let yearOptions = `<option value="0" selected>請選擇</option>`
+
+// 西元年 1960-2021
+// for (let i = 1960; i < 2022; i++) {
+//   yearOptions += `<option value="${i}">${i}</option>`
+// }
+// inputYear.innerHTML = yearOptions
+
+// 用一個函式一起跑
+function createOption(min, max) {
+  let options = `<option value="0" selected>請選擇</option>`
+
+  for (let i = min; i < max + 1; i++) {
+    options += `<option value="${i}">${i}</option>`
+  }
+  return options
+}
+
+// 設定年月日區間
+inputYear.innerHTML = createOption(1960, 2021)
+inputMonth.innerHTML = createOption(1, 12)
+inputDay.innerHTML = createOption(1, 31)
+
+inputYear.addEventListener('change', function () {
+  selectYear = inputYear.value
+  console.log(selectYear)
+})
+inputMonth.addEventListener('change', function () {
+  selectMonth = inputMonth.value
+  console.log(selectMonth)
+  // 判斷年和月已選
+  if (selectYear !== '0' && selectMonth !== '0') {
+    // 填入當月日數
+    // days = new Date(year,month,0).getDate()
+    const maxDays = new Date(+selectYear, +selectMonth, 0).getDate()
+    inputDay.innerHTML = createOption(1, maxDays)
+
+    // 解開日選單
+    inputDay.disabled = false
+  }
+})
+inputDay.addEventListener('change', function () {
+  selectDay = inputDay.value
+  console.log(selectDay)
+})
+
+// ----- 地址下拉選單
 // 預設選項值為 -1
 let cityIndex = -1
 let distIndex = -1

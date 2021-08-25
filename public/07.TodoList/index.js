@@ -83,4 +83,5 @@ function delData(e) {
 listWrap.addEventListener('click', delData)
 
 // 問題：抓不到動態生成DOM 的id？
+// 解法：監聽父元素，再判斷點擊位置
 // 如何透過索引值刪掉單項storage？
