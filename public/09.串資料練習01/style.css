@@ -1,0 +1,42 @@
+/* * {
+  border: 1px solid tan;
+} */
+
+h1,
+h3 {
+  font-family: 'VT323', monospace;
+}
+h4 {
+  font-family: 'Sedgwick Ave', cursive;
+}
+h6,
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  margin: 8px 0;
+}
+h1 {
+  font-size: 48px;
+}
+h3 {
+  border-bottom: 3px solid black;
+}
+h6 {
+  font-weight: bold;
+  margin-right: 12px;
+}
+
+ol,
+li {
+  list-style: square;
+}
+
+.card {
+  border: 5px solid black;
+  border-radius: 0.5em;
+  min-height: 360px;
+}
+.card:hover {
+  box-shadow: 5px 8px 0 0 black;
+}
