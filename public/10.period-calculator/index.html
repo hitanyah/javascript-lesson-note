@@ -11,32 +11,34 @@
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Sedgwick+Ave&family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500&family=Noto+Serif+TC:wght@200;300&family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+
     <!-- my css -->
     <link href="style.css" rel="stylesheet">
 
     <title>經期計算機</title>
 </head>
 <body>
-  <header class="my-5">
-    <h1 class="text-center my-4">經期計算機</h1>
+  <header class="">
+    <h1 class="ml-2 mt-2 mb-0">經期計算機</h1>
+    <h6 class="my-0 mx-2">Period Calculator</h6>
   </header>
   <div class="container mb-5">
     <div class="row text-center m-4">
-      <div class="col-12">
+      <div class="input-box col-12">
         <h5>請輸入生理週期天數</h5>
         <input id="cycle" class="m-2" type="number" min="1" value="28">
       </div>
-      <div class="col-12 mt-4">
+      <div class="input-box col-12 mt-4">
         <h5>請輸入最近一次的月經開始日</h5>
         <input id="date-last" class="m-2" type="date">
       </div>
       <div class="col-12 p-4">
-        <button id="btn-start" class="btn btn-lg btn-secondary mt-3">開始計算</button>
+        <button id="btn-start" class="btn btn-lg btn-my mt-2 px-4">開始計算</button>
       </div>
     </div>
     <div class="row text-center justify-content-center">
-      <div class="card col-8 p-0">
+      <div class="card col-8 p-0 my-2">
         <div class="card-header">
           您的下次生理期為
         </div>
@@ -46,7 +48,7 @@
           </p>
         </div>
         <div id="ps" class="card-footer text-muted py-3">
-         記得照顧好自己喔
+         記得照顧好自己喔 <i class="fas fa-heart"></i>
           <!-- 加入Google行事曆
           <div>
             <button id="btn-note" class="btn btn-sm btn-outline-secondary mt-2">提醒我</button>
