@@ -32,22 +32,24 @@
         <input id="date-last" class="m-2" type="date">
       </div>
       <div class="col-12 p-4">
-        <button id="btn-start" class="btn btn-outline-secondary">開始計算</button>
+        <button id="btn-start" class="btn btn-lg btn-secondary mt-3">開始計算</button>
       </div>
     </div>
     <div class="row text-center justify-content-center">
-      <div class="card col-10">
+      <div class="card col-8 p-0">
         <div class="card-header">
           您的下次生理期為
         </div>
         <div class="card-body">
-          <h4 id="date-result" class="card-title m-2">尚未計算</h4>
-          <p  id="countdown"  class="card-text mt-4">還有 ? 天
+          <h3 id="date-result" class="card-title m-2">尚未計算</h3>
+          <p  id="countdown"  class="card-text mt-3">還有 ? 天
           </p>
-          <button id="btn-note" class="btn btn-outline-secondary">提醒我</button>
         </div>
-        <div id="ps" class="card-footer text-muted">
-          計算完成後 可以加入Google行事曆提醒呦
+        <div id="ps" class="card-footer text-muted py-3">
+          加入Google行事曆
+          <div>
+            <button id="btn-note" class="btn btn-sm btn-outline-secondary mt-2">提醒我</button>
+          </div>
         </div>
       </div>
     </div>

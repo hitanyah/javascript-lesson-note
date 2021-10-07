@@ -11,20 +11,22 @@ const now = new Date()
 
 // 計算下個日期 last date + cycle days
 btnStart.addEventListener('click', function () {
-  let cycleDays = Number(cycle.value)
-  let lastDate = new Date(last.value)
-  // 1. 計算下一次日期
-  let result = addDays(lastDate, cycleDays)
-  // 格式化日期
-  let resultYear = result.getFullYear()
-  let resultMonth = result.getMonth() + 1
-  let resultDay = result.getDate()
-  // 顯示在畫面
-  next.innerText = `${resultYear} 年 ${resultMonth} 月 ${resultDay} 日`
-  // 2. 計算還有幾天
-  let countNum = countDays(result, now)
-  // 顯示在畫面
-  countdown.innerText = `還有 ${countNum} 天`
+  if (last.value && cycle.value) {
+    let cycleDays = Number(cycle.value)
+    let lastDate = new Date(last.value)
+    // 1. 計算下一次日期
+    let result = addDays(lastDate, cycleDays)
+    // 格式化日期
+    let resultYear = result.getFullYear()
+    let resultMonth = result.getMonth() + 1
+    let resultDay = result.getDate()
+    // 顯示在畫面
+    next.innerText = `${resultYear} 年 ${resultMonth} 月 ${resultDay} 日`
+    // 2. 計算還有幾天
+    let countNum = countDays(result, now)
+    // 顯示在畫面
+    countdown.innerText = `還有 ${countNum} 天`
+  }
 })
 
 // 計算下一次日期：上次日期 + 週期
