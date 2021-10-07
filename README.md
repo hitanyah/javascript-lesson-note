@@ -24,4 +24,4 @@ JavaScript 學習記錄
 
 [09. 串資料練習 01](https://hitanyah.github.io/javascript-lesson-note/public/09.串資料練習01/index.html)
 
-[10. 經期計算機](https://hitanyah.github.io/javascript-lesson-note/public/10-period-calculator/index.html)
+[10. 經期計算機](https://hitanyah.github.io/javascript-lesson-note/public/10.period-calculator/index.html)
